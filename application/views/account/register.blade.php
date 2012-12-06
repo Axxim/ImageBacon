@@ -16,7 +16,6 @@
         <?php endif; ?>
 
         {{ Form::horizontal_open() }}
-        <form class="form-horizontal" action='' method="POST">
             <fieldset>
                 <div id="legend">
                     <legend class="">Register</legend>
