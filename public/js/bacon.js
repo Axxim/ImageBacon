@@ -45,7 +45,7 @@ var Bacon = {
 			$('input[type=file]').click();
 		});
 
-		$('form').on('submit', function(event) {
+		$('#upload').on('submit', function(event) {
 			event.preventDefault();
 
 			Bacon.Upload(event);
@@ -55,10 +55,7 @@ var Bacon = {
 	Upload: function(event) {
 		window.location.hash = 'uploading';
 
-		$('#uploaded').show();
-
-  		$('#files').triggerHandler('html5_upload.start');
-
+  		// $('#files').triggerHandler('html5_upload.start');
 	},
 
 	Progress: function() {
