@@ -1,11 +1,24 @@
-#uploaded { display:none; }
+#queue {
+  border-bottom:none;
+  height:177px;
+  overflow:auto;
+  overflow-x:hidden;
+}
 .container-narrow {
   margin:0 auto;
   max-width:800px;
 }
 .container-narrow > hr { margin:30px 0; }
+.container-upload {
+  width:250px;
+  border:1px solid #e5e5e5;
+}
+.container-upload .btn-group { display:inline; }
+.container-upload .btn-group .btn {
+  font-size:14px;
+  width:100px;
+}
 .center { text-align:center; }
-.btn-group > .btn { font-size:14px; }
 .progress { margin-bottom:5px; }
 body { margin-top:40px; }
 * {
@@ -17,12 +30,3 @@ button, input { font-family:"Open Sans"; }
 .masthead h3 a { color:#000000; }
 .masthead h3 a:hover { text-decoration:none; }
 .upload-hidden { display:none; }
-#queue {
-  border:1px solid #e5e5e5;
-  height:177px;
-  overflow:auto;
-  margin-bottom:10px;
-  padding:0 3px 3px;
-  width:300px;
-  overflow-x:hidden;
-}

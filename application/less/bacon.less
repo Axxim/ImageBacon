@@ -1,8 +1,13 @@
 // Includes
 
 // Core Ids
-#uploaded {
-	display: none;
+#queue {
+	
+	border-bottom: none;
+	height: 177px;
+	overflow: auto;
+
+	overflow-x: hidden;
 }
 
 // Core Classes
@@ -14,13 +19,26 @@
 	margin: 30px 0;
 }
 
+.container-upload {
+	width: 250px;
+	border: 1px solid #E5E5E5;
+
+	.btn-group {
+		display: inline;
+
+
+		.btn {
+			font-size: 14px;
+
+			width: 100px;
+		}
+	}
+}
+
 .center {
 	text-align: center;
 }
 
-.btn-group > .btn {
-	font-size: 14px;
-}
 .progress {
 	margin-bottom: 5px;
 }
@@ -82,13 +100,3 @@ button,input {
 	margin-right: 10px;
 }
 */
-#queue {
-	border: 1px solid #E5E5E5;
-	height: 177px;
-	overflow: auto;
-	margin-bottom: 10px;
-	padding: 0 3px 3px;
-	width: 300px;
-
-	overflow-x: hidden;
-}

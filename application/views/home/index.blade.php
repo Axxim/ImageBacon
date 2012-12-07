@@ -11,35 +11,13 @@
 	
 	<div class="row-fluid ">
 		<div class="span4 offset4">
-			<!--{{ Form::open_for_files('api/upload', 'post'); }}
-				{{ Form::token(); }}
-				<input type="hidden" name="{{ ini_get("session.upload_progress.name"); }}" value="upload">
+			<div class="container-upload">
+				<ul id="queue" class="nav nav-list"></ul>
 
 				<div class="btn-group">
-					<button class="btn btn-large btn-success upload">{{ Lang::line('imagebacon.upload')->get(); }}</button>
-					<button class="btn btn-large btn-success submit">
-						<i class="icon-upload icon-white"></i>
-					</button>
+					<input id="upload" name="images[]" type="file" multiple="true">
+					<a class="btn btn-primary" href="javascript:$('#upload').uploadifive('upload')">Upload Files</a>
 				</div>
-
-				<input type="file" id="files" class="upload-hidden" name="images[]" accept="image/*" value="" multiple>
-			{{ Form::close() }}
-
-
-			<div id="uploaded">
-				<ul class="nav nav-list">
-					<li class="nav-header">Completed Images</li>
-				</ul>
-				<div class="progress progress-striped active">
-					<div class="bar" style="width: 0%;"></div>
-				</div>
-			</div>
-		-->
-			<ul id="queue" class="nav nav-list"></ul>
-
-			<div class="btn-group">
-			<input id="upload" name="images[]" type="file" multiple="true">
-			<a class="btn btn-success" href="javascript:$('#upload').uploadifive('upload')">Upload Files</a>
 			</div>
 		</div>
 	</div>

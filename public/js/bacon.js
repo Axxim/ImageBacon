@@ -8,41 +8,29 @@ var Bacon = {
 	},
 
 	Hooks: function() {
-		/*
-		$("#files").html5_upload({
-			autostart: false,
-			
-		    url: "/api/upload",
-		    fieldName: 'images[]',
-		    sendBoundary: window.FormData || $.browser.mozilla,
-		    onStart: function(event, total) {
-		        return true;
-		    },
-		    onProgress: function(event, progress, name, number, total) {
+		$('#upload').uploadifive({
+			auto             : false,
+			queueID          : 'queue',
+			uploadScript     : '/api/upload/',
+			buttonClass      : 'btn btn-primary',
+			itemTemplate     : '<li class="uploadifive-queue-item"><a href="#"><span class="filename"></span><i class="close icon-remove"></i><div class="progress"><div class="progress-bar"></div></div></a></li>',
 
-		    },
-		    setName: function(text) {
-		    },
-		    setStatus: function(text) {
-		        $("#progress_report_status").text(text);
-		    },
-		    setProgress: function(val) {
-		        $(".progress .bar").css('width', Math.ceil(val*100)+"%");
-		    },
-		    onFinishOne: function(event, response, name, number, total) {
-		    	response = $.parseJSON(response);
-		        $('#uploaded .nav').append('<li><a href="http://i.mgba.co/'+response.name+'" target="_blank">'+name+' <i class="icon-arrow-right"></i> '+response.name+'</a></li>');
-		    },
-		    onError: function(event, name, error) {
-		        alert('error while uploading file ' + name);
-		    }
+			height			 : 'auto',
+			width			 : '103',
+
+			onUploadComplete : function(file, data) { 
+				data = $.parseJSON(data);
+
+				$("span:contains('"+file.name+"')").parent().parent().html("<a href='"+data.url+"' target='_blank'>"+data.name+"</a>");
+
+				console.log(data);
+			}
 		});
-		*/
 
-		$('.upload').on('click', function(event) {
+		$('.select').on('click', function(event) {
 			event.preventDefault();
 
-			$('input[type=file]').click();
+			$('#upload').click();
 		});
 
 		$('#upload').on('submit', function(event) {
@@ -68,16 +56,3 @@ var Bacon = {
 
 Bacon.Start();
 
-$('#upload').uploadifive({
-	auto             : false,
-	queueID          : 'queue',
-	uploadScript     : '/api/upload/',
-	buttonClass      : 'btn btn-success',
-	itemTemplate     : '<li class="uploadifive-queue-item"><a href="#"><span class="filename"></span><i class="close icon-remove"></i></a></li>',
-
-	onUploadComplete : function(file, data) { 
-		console.log(file,data); 
-
-		console.log(file.queueItem);
-	}
-});
