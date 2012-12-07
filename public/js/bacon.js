@@ -73,9 +73,11 @@ $('#upload').uploadifive({
 	queueID          : 'queue',
 	uploadScript     : '/api/upload/',
 	buttonClass      : 'btn btn-success',
-	itemTemplate     : '<li class="uploadifive-queue-item"><span class="filename"></span> | <span class="fileinfo"></span><div class="close"><i class="close icon-remove"></i></div></li>',
+	itemTemplate     : '<li class="uploadifive-queue-item"><a href="#"><span class="filename"></span><i class="close icon-remove"></i></a></li>',
 
 	onUploadComplete : function(file, data) { 
 		console.log(file,data); 
+
+		console.log(file.queueItem);
 	}
 });

@@ -17,21 +17,6 @@ button, input { font-family:"Open Sans"; }
 .masthead h3 a { color:#000000; }
 .masthead h3 a:hover { text-decoration:none; }
 .upload-hidden { display:none; }
-.uploadifive-queue-item .progress {
-  border:1px solid #d0d0d0;
-  height:3px;
-  margin-top:5px;
-  width:100%;
-}
-.uploadifive-queue-item .progress-bar {
-  background-color:#0072bc;
-  height:3px;
-  width:0;
-}
-.uploadifive-button {
-  float:left;
-  margin-right:10px;
-}
 #queue {
   border:1px solid #e5e5e5;
   height:177px;
@@ -39,4 +24,5 @@ button, input { font-family:"Open Sans"; }
   margin-bottom:10px;
   padding:0 3px 3px;
   width:300px;
+  overflow-x:hidden;
 }

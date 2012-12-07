@@ -51,7 +51,7 @@ class Api_Upload_Controller extends Base_Controller {
 			S3::put_object(S3::input_file($image['tmp_name'], false), 'ImageBacon', $name, S3::ACL_PUBLIC_READ, array(), $image['type']);
 		}
 
-		return Response::json(array('status' => true, 'name' => $name));
+		return Response::json(array('status' => true, 'name' => $name, 'url' => 'http://i.mgba.co/n/'.$name));
 	}
 
 	private function unique($len = 5)

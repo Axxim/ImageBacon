@@ -37,8 +37,10 @@
 		-->
 			<ul id="queue" class="nav nav-list"></ul>
 
+			<div class="btn-group">
 			<input id="upload" name="images[]" type="file" multiple="true">
 			<a class="btn btn-success" href="javascript:$('#upload').uploadifive('upload')">Upload Files</a>
+			</div>
 		</div>
 	</div>
 
