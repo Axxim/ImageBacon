@@ -22,8 +22,8 @@
 
 		<div class="masthead">
 			<ul class="nav nav-pills pull-right">
-				<li class="active"><a href="#">{{ Lang::line('imagebacon.home')->get() }}</a></li>
-				<li><a href="#">{{ Lang::line('imagebacon.gallery')->get() }}</a></li>
+				<li class="active"><a href="/">{{ Lang::line('imagebacon.home')->get() }}</a></li>
+				<li><a href="/gallery">{{ Lang::line('imagebacon.gallery')->get() }}</a></li>
 				@if(!Auth::check())
 				<li class="dropdown">
 					<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>

@@ -33,6 +33,7 @@
 */
 
 Route::controller('home');
+Route::controller('gallery');
 Route::controller('account');
 Route::controller('api.upload');
 

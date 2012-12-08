@@ -16,7 +16,7 @@
 
 				<div class="btn-group">
 					<input id="upload" name="images[]" type="file" multiple="true">
-					<a class="btn btn-primary" href="javascript:$('#upload').uploadifive('upload')">Upload Files</a>
+					<a class="btn btn-primary upload" href="#">Upload Files</a>
 				</div>
 			</div>
 		</div>

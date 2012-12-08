@@ -22,18 +22,10 @@ var Bacon = {
 				data = $.parseJSON(data);
 
 				$("span:contains('"+file.name+"')").parent().parent().html("<a href='"+data.url+"' target='_blank'>"+data.name+"</a>");
-
-				console.log(data);
 			}
 		});
 
-		$('.select').on('click', function(event) {
-			event.preventDefault();
-
-			$('#upload').click();
-		});
-
-		$('#upload').on('submit', function(event) {
+		$('.upload').on('click', function(event) {
 			event.preventDefault();
 
 			Bacon.Upload(event);
@@ -41,9 +33,9 @@ var Bacon = {
 	}, 
 
 	Upload: function(event) {
-		window.location.hash = 'uploading';
+		//window.location.hash = 'uploading';
 
-  		// $('#files').triggerHandler('html5_upload.start');
+		$('#upload').uploadifive('upload');
 	},
 
 	Progress: function() {

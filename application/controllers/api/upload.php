@@ -43,15 +43,26 @@ class Api_Upload_Controller extends Base_Controller {
 			$i->file_size = $image['size'];
 			$i->file_type = $image['type'];
 			$i->file_tmp = $image['tmp_name'];
+			$i->public = true; // Option for this pl0x
 			$i->nsfw = false;
 
 			$i->save();
 
 			// Upload to S3
 			S3::put_object(S3::input_file($image['tmp_name'], false), 'ImageBacon', $name, S3::ACL_PUBLIC_READ, array(), $image['type']);
+
+			$this->gen_thumb($image['tmp_name'], $name, $image['type']);
 		}
 
 		return Response::json(array('status' => true, 'name' => $name, 'url' => 'http://i.mgba.co/'.$name));
+	}
+ 
+	private function gen_thumb($image, $name, $mime, $height = 180, $width = 260)
+	{
+		$image = WideImage::load($image);
+		$thumb = $image->resize($height, $width);
+
+        S3::put_object($thumb->asString('png'), 'ImageBacon', 'thumb/'.$name, S3::ACL_PUBLIC_READ, array(), $mime);
 	}
 
 	private function unique($len = 5)

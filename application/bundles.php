@@ -39,5 +39,13 @@ return array(
 	'bootstrapper' => array('auto' => true),
 	'laraveless' => array('auto' => true),
 	's3' => array('auto' => true),
+	'wideimage' => array(
+		'auto' => true,
+        'autoloads' => array(
+            'map' => array(
+                'WideImage' => '(:bundle)/lib/WideImage.php',
+            ),
+        ),
+    ),
 
 );
