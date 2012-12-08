@@ -9,7 +9,7 @@
  	<link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" type="text/css">
  	<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
 	{{ Asset::container('bootstrapper')->styles() }}
-	{{ HTML::style('css/master.css') }}
+	{{ HTML::style('css/master.css?v='.md5_file(path('public').'css/master.css')) }}
 	
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -62,8 +62,8 @@
 	</div> <!-- /container -->
 
 	{{ Asset::container('bootstrapper')->scripts() }}
-	{{ HTML::script('js/upload.min.js') }}
-	{{ HTML::script('js/bacon.js'); }}
+	{{ HTML::script('js/upload.min.js?v='.md5_file(path('public').'js/upload.min.js')) }}
+	{{ HTML::script('js/bacon.js?v='.md5_file(path('public').'js/bacon.js')); }}
 
 	<script type="text/javascript">
 
