@@ -56,7 +56,7 @@
 		<hr>
 
 		<div class="footer">
-			<p>&copy; Company 2012</p>
+			<p>&copy; <a href="http://axxim.net/">Axxim, LLC</a> 2012</p>
 		</div>
 
 	</div> <!-- /container -->

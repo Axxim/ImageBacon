@@ -29,7 +29,7 @@ class Api_Upload_Controller extends Base_Controller {
 			}
 
 			// Get the extension
-			$ext = File::extension($image['name']);
+			$ext = strtolower(File::extension($image['name']));
 
 			$unique = $this->unique();
 			$name   = $unique.'.'.$ext;
@@ -54,7 +54,7 @@ class Api_Upload_Controller extends Base_Controller {
 			$this->gen_thumb($image['tmp_name'], $name, $image['type']);
 		}
 
-		return Response::json(array('status' => true, 'name' => $name, 'url' => 'http://i.mgba.co/'.$name));
+		return Response::json(array('status' => true, 'name' => $name, 'url' => 'https://i.mgba.co/'.$name));
 	}
  
 	private function gen_thumb($image, $name, $mime, $height = 180, $width = 260)
@@ -62,7 +62,7 @@ class Api_Upload_Controller extends Base_Controller {
 		$image = WideImage::load($image);
 		$thumb = $image->resize($height, $width);
 
-        S3::put_object($thumb->asString('png'), 'ImageBacon', 'thumb/'.$name, S3::ACL_PUBLIC_READ, array(), $mime);
+        S3::put_object($thumb->asString('jpg'), 'ImageBacon', 'thumb/'.$name, S3::ACL_PUBLIC_READ, array(), $mime);
 	}
 
 	private function unique($len = 5)

@@ -37,6 +37,7 @@ Route::controller('gallery');
 Route::controller('account');
 Route::controller('api.upload');
 
+Route::get('/n/(:any)', 'gallery@image');
 
 /*
 |--------------------------------------------------------------------------
