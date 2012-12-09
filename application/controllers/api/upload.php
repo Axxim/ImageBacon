@@ -45,6 +45,11 @@ class Api_Upload_Controller extends Base_Controller {
 			$i->file_tmp = $image['tmp_name'];
 			$i->public = true; // Option for this pl0x
 			$i->nsfw = false;
+			if (Auth::check()) {
+				$i->user_id = Auth::user()->id;
+			} else {
+				$i->user_id = null;
+			}
 
 			$i->save();
 

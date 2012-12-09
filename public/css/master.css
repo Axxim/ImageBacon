@@ -4,6 +4,19 @@
   overflow:auto;
   overflow-x:hidden;
 }
+#gallery .thumbnails .span2 a {
+  width:170px;
+  height:130px;
+  max-width:170px;
+  max-height:130px;
+  min-width:170px;
+  min-height:130px;
+  vertical-align:center;
+}
+#gallery .thumbnails .span2 a img {
+  max-width:170px;
+  max-height:130px;
+}
 .container-narrow {
   margin:0 auto;
   max-width:800px;

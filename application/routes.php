@@ -38,6 +38,7 @@ Route::controller('account');
 Route::controller('api.upload');
 
 Route::get('/n/(:any)', 'gallery@image');
+Route::get('/user/(:any)', 'user@user');
 
 /*
 |--------------------------------------------------------------------------

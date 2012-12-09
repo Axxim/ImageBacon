@@ -1,6 +1,7 @@
 @layout('master')
 
 @section('content')
+<h3>{{$user->username}}</h3>
 
 <div id="gallery">
 	<ul class="thumbnails">
@@ -13,5 +14,6 @@
 	@endforeach
 	</ul>
 </div>
+
 
 @endsection
