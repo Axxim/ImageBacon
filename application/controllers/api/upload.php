@@ -59,7 +59,7 @@ class Api_Upload_Controller extends Base_Controller {
 			$this->gen_thumb($image['tmp_name'], $name, $image['type']);
 		}
 
-		return Response::json(array('status' => true, 'name' => $name, 'url' => 'https://i.mgba.co/'.$name));
+		return Response::json(array('status' => true, 'name' => $name, 'url' => 'https://imagebacon.com/n/'.$unique, 'image' => 'https://i.mgba.co/'.$name));
 	}
  
 	private function gen_thumb($image, $name, $mime, $height = 180, $width = 260)
