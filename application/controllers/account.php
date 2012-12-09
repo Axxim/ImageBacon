@@ -66,7 +66,7 @@ class Account_Controller extends Base_Controller
 
         $user->save();
 
-        $credentials = array('username' => $input['username'], 'password' => $input['username']);
+        $credentials = array('username' => $input['username'], 'password' => $input['password']);
 
 		if (Auth::attempt($credentials)) {
 		    return Redirect::to_action('home');
