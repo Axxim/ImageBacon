@@ -34,6 +34,7 @@
 							<input class="btn btn-primary btn-block" type="submit" id="sign-in" value="Sign In">
 							<label style="text-align:center;margin-top:5px">or</label>
 					        <a class="btn btn-primary btn-block" type="button" href="/account/register">Register an account</a>
+					        <a class="btn btn-primary btn-block" type="button" href="/account/forgot">Forgot My Password</a>
 						</form>
 					</div>
 				</li>
@@ -56,7 +57,7 @@
 		<hr>
 
 		<div class="footer">
-			<p>&copy; <a href="http://axxim.net/">Axxim, LLC</a> 2012</p>
+			<p>&copy; <a href="http://axxim.net/">Axxim, LLC</a> 2012 - <a href="https://github.com/axxim/imagebacon">GitHub</a> - <a href="/blog">Blog</a></p>
 		</div>
 
 	</div> <!-- /container -->

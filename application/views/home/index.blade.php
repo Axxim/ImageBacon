@@ -18,6 +18,11 @@
 				</div>
 			</div>
 		</div>
+		<!--<div class="span4">
+			<h3>Create an Album</h3>
+			<div class="albums"><span class="label label-success">Success</span></div><br>
+			<p>Drag and drop some images here to create an album.</p>
+		</div>-->
 	</div>
 </div>
 

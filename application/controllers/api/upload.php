@@ -65,7 +65,7 @@ class Api_Upload_Controller extends Base_Controller {
 	private function gen_thumb($image, $name, $mime, $height = 180, $width = 260)
 	{
 		$image = WideImage::load($image);
-		$thumb = $image->resize($height, $width);
+		$thumb = $image->crop('center', 'center', $width * 2, $height * 2)->resize($width, $height);
 
         S3::put_object($thumb->asString('jpg'), 'ImageBacon', 'thumb/'.$name, S3::ACL_PUBLIC_READ, array(), $mime);
 	}

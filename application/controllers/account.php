@@ -81,4 +81,24 @@ class Account_Controller extends Base_Controller
         return Redirect::to('/');
     }
 
+    public function get_forgot($code = null)
+    {
+        if($code != null) {
+            // We might have a code
+        } else {
+            // No code, they want to reset
+
+            return View::make('account.forgot');
+        }
+    }
+
+    public function post_forgot()
+    {
+        // Send their code
+
+        $input = Input::all();
+
+
+    }
+
 }

@@ -13,7 +13,7 @@ var Bacon = {
 			queueID          : 'queue',
 			uploadScript     : '/api/upload/',
 			buttonClass      : 'btn btn-primary',
-			itemTemplate     : '<li class="uploadifive-queue-item"><a href="#"><span class="filename"></span><i class="close icon-remove"></i><div class="progress"><div class="progress-bar"></div></div></a></li>',
+			itemTemplate     : '<li class="uploadifive-queue-item"><input type="checkbox" class="pull-left "><a href="#"><span class="filename"></span><i class="close icon-remove"></i><div class="progress"><div class="bar progress-bar"></div></div></a></li>',
 
 			height			 : 'auto',
 			width			 : '103',
